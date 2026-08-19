@@ -97,3 +97,7 @@ a {
 .text-justify {
     text-align: justify;
 }
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+}
