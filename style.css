@@ -1,0 +1,99 @@
+/* style.css */
+
+/* --- CONFIGURAÇÃO GERAL DO CORPO DA PÁGINA --- */
+body {
+    /* Camada de cor preta semi-transparente por cima da imagem para escurecer o fundo */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('imagens/fundo.jpg'); /* <-- Confirme se o nome do ficheiro está correto */
+
+    /* Propriedades para garantir que a imagem de fundo se comporta bem */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
+    /* Define a cor PADRÃO do texto para um branco suave. Afeta todo o texto que não tenha outra regra. */
+    color: #f8f9fa; 
+}
+
+
+/* --- ESTILOS PARA TEXTOS DIRETAMENTE SOBRE O FUNDO (HEADER, SOBRE MIM, ETC.) --- */
+/* Esta é a regra principal que vai resolver o seu problema */
+header .display-4,
+header .lead,
+main h2,
+main p {
+    color: #ffffff; /* Garante que todos estes textos são brancos */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona sombra para máxima legibilidade */
+}
+
+/* Ajuste fino para os títulos das secções para se destacarem mais */
+main h2 {
+    font-weight: bold;
+}
+
+
+/* --- ESTILOS PARA O CONTEÚDO DENTRO DOS CARTÕES BRANCOS --- */
+.card {
+    background-color: rgba(255, 255, 255, 0.95); 
+    border: none;
+}
+
+/* Cor para o texto normal dentro dos cartões */
+.card-body, .card-body ul li, .card-text {
+    color: #343a40; /* Cinzento escuro */
+    text-shadow: none;
+}
+
+/* Cor de destaque para os TÍTULOS dos cartões */
+.card-title {
+    color: #004d00; /* Verde escuro tecnológico */
+    font-weight: bold;
+    text-shadow: none; /* Remove a sombra de texto aqui dentro */
+}
+
+/* --- AJUSTES FINAIS PARA LINKS --- */
+a {
+    color: #6ea8fe; /* Um azul claro que contrasta bem */
+}
+
+/* 
+ * Ajuste para o texto de descrição nos cartões de projeto
+ * para garantir a legibilidade.
+*/
+.card-text {
+    color: #555; /* Um cinzento mais escuro e bem legível */
+}
+
+/*
+ * Personalização dos botões primários (btn-primary)
+*/
+.btn-primary {
+    /* Cor de fundo com um gradiente verde escuro */
+    background-image: linear-gradient(to right, #003300, #006600);
+    
+    /* Cor da borda */
+    border-color: #004d00;
+    
+    /* Garante que o texto dentro do botão é branco */
+    color: #ffffff;
+}
+
+/* 
+ * Efeito visual quando passamos o rato por cima do botão (hover)
+ * Torna o gradiente um pouco mais claro.
+*/
+.btn-primary:hover {
+    background-image: linear-gradient(to right, #004d00, #008000);
+    border-color: #006600;
+    color: #ffffff;
+}
+
+/*
+ * Criamos a nossa própria classe 'text-justify' porque
+ * o Bootstrap moderno já não a inclui.
+*/
+.text-justify {
+    text-align: justify;
+}
